@@ -13,6 +13,7 @@ Date: Oct 20, 2018
       1.3 Data Processing 
         
           1.3.1 mean_hr_bpm: estimated average heart rate over a user-specified number of minutes (can choose a default        interval) 
+          
           1.3.2 Unit testing for mean_hr_bpm
           
           1.3.3 voltage_extremes: tuple containing minimum and maximum lead voltages
