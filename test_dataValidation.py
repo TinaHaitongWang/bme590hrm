@@ -3,7 +3,7 @@ from readCSV import importdata
 import pytest
 
 
-@pytest.mark.parametrize("input,expected", [
+@pytest.mark.parametrize("source,expected", [
     ("test_data1.csv", 10000),
     ("test_data5.csv", 10000),
     ("test_data17.csv", 10000),
