@@ -13,8 +13,8 @@ import pytest
     ("test_data31.csv", 9996),
     ("test_data32.csv", 10000),
 ])
-def test_is_data_number(input, expected):
-    testdata = importData(input)
-    output = is_data_number(testdata)
-    len = output.shape[0]
-    assert len == expected
+def test_is_data_number(source, expected):
+    test_data = importData(source)
+    output = is_data_number(test_data)
+    len_output = output.shape[0]
+    assert len_output == expected
