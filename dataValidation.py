@@ -1,4 +1,4 @@
-from readCSV import importData
+from readCSV import importdata
 import pandas as pd
 
 
@@ -13,5 +13,5 @@ def is_data_number(test_data):
 
 if __name__ == '__main__':
     filename = "test_data32.csv"
-    data = importData(filename)
+    data = importdata(filename)
     is_data_number(data)
