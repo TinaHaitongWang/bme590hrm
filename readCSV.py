@@ -4,6 +4,8 @@ import glob
 
 cwd = os.getcwd()
 folderPath = "test_data/"
+
+
 # filename = "test_data1.csv"
 
 def importData(filename):
@@ -19,5 +21,3 @@ def importData(filename):
 
 if __name__ == '__main__':
     importData(filename)
-
-
