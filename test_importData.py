@@ -13,8 +13,10 @@ test_data17 = pd.DataFrame(data={'time': [0, 13.887],
                                  'voltage': [-0.15, -0.175]},
                            index=[0, 9999])
 test_data23 = pd.DataFrame(data={'time': [0, 39.996],
-                                 'voltage': [-0.51, 1.085]}, index=[0, 9999])
-test_data28 = pd.DataFrame(data={'time': [0, 27.775], 'voltage': [-0.145, 0.72]},
+                                 'voltage': [-0.51, 1.085]},
+                           index=[0, 9999])
+test_data28 = pd.DataFrame(data={'time': [0, 27.775],
+                                 'voltage': [-0.145, 0.72]},
                            index=[0, 9999])
 test_data29 = pd.DataFrame(data={'time': [0, 13.887],
                                  'voltage': [0.18462, 0.33077]},
