@@ -13,7 +13,7 @@ test_data31 = pd.DataFrame(data={'time': [0, 13.887], 'voltage': [-0.0625, -0.08
 test_data32 = pd.DataFrame(data={'time': [0, 13.887], 'voltage': [-243.75, -268.75]}, index=[0, 9999])
 
 
-@pytest.mark.parametrize("input,expected", [
+@pytest.mark.parametrize("file_name,expected", [
     ("test_data1.csv", test_data1),
     ("test_data5.csv", test_data5),
     ("test_data17.csv", test_data17),
