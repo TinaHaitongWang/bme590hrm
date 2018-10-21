@@ -13,5 +13,5 @@ def is_data_number(test_data):
 
 if __name__ == '__main__':
     filename = "test_data32.csv"
-    test_data = importData(filename)
-    is_data_number(test_data)
+    data = importData(filename)
+    is_data_number(data)
