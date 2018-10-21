@@ -1,7 +1,7 @@
 from dataValidation import is_data_number
 from readCSV import importData
 import pytest
-import pandas as pd
+
 
 @pytest.mark.parametrize("input,expected",[
     ("test_data1.csv", 10000),
