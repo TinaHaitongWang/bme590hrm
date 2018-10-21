@@ -1,4 +1,4 @@
-from readCSV import importData
+from readCSV import importdata
 import pytest
 import pandas as pd
 
@@ -23,7 +23,7 @@ test_data32 = pd.DataFrame(data={'time': [0, 13.887], 'voltage': [-243.75, -268.
     ("test_data31.csv", test_data31),
     ("test_data32.csv", test_data32),
 ])
-def test_is_importdata(input, expected):
-    output = importData(input)
+def test_is_importdata(file_name, expected):
+    output = importdata(file_name)
     output_array = pd.concat([output.head(1), output.tail(1)])
     assert (output_array == expected).all
