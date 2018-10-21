@@ -1,5 +1,5 @@
 from dataValidation import is_data_number
-from readCSV import importData
+from readCSV import importdata
 import pytest
 
 
@@ -14,7 +14,7 @@ import pytest
     ("test_data32.csv", 10000),
 ])
 def test_is_data_number(source, expected):
-    test_data = importData(source)
+    test_data = importdata(source)
     output = is_data_number(test_data)
     len_output = output.shape[0]
     assert len_output == expected
