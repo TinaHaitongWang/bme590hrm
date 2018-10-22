@@ -1,7 +1,7 @@
 from dataValidation import is_data_number
 from readCSV import importdata
 import numpy as np
-
+import matplotlib.pyplot as plt
 
 def filter_data(data):
     voltage = data['voltage']
@@ -14,15 +14,12 @@ def filter_data(data):
             fft[i] = 0
     filtered_data = np.fft.ifft(fft)
     filtered_data = filtered_data.real
-    #plt.plot(voltage[1:1000])
-    #plt.plot(data_remove_low[1:1000])
-    #plt.show()
     data['voltage'] = filtered_data
     return data
 
 
 if __name__ == '__main__':
-    filename = "test_data1.csv"
+    filename = "test_data20.csv"
     test_data = importdata(filename)
     data_valid = is_data_number(test_data)
     filter_data(data_valid)
