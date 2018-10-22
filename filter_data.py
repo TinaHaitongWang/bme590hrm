@@ -1,9 +1,6 @@
-
 from dataValidation import is_data_number
 from readCSV import importdata
-import matplotlib.pyplot as plt
 import numpy as np
-from scipy.interpolate import interp1d
 
 
 def filter_data(data):
@@ -13,13 +10,14 @@ def filter_data(data):
     #plt.plot(fft[1500:11000])
     for i in range(len(fft)):
         if 1200 <= i <= 6500:
+            # remove high frequency noise
             fft[i] = 0
-    filter_data = np.fft.ifft(fft)
-    filter_data = filter_data.real
+    filtered_data = np.fft.ifft(fft)
+    filtered_data = filtered_data.real
     #plt.plot(voltage[1:1000])
     #plt.plot(data_remove_low[1:1000])
     #plt.show()
-    return filter_data
+    return filtered_data
 
 
 if __name__ == '__main__':
