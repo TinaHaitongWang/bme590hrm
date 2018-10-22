@@ -17,7 +17,8 @@ def filter_data(data):
     #plt.plot(voltage[1:1000])
     #plt.plot(data_remove_low[1:1000])
     #plt.show()
-    return filtered_data
+    data['voltage'] = filtered_data
+    return data
 
 
 if __name__ == '__main__':
