@@ -47,7 +47,7 @@ def detect_peak(data, min_voltage, is_secondary_peak):
                 next_peak = data.iloc[peaks[i+1]]['voltage']
                 last_peak = data.iloc[peaks[i-1]]['voltage']
                 if (current_peak > next_peak) \
-                        and (current_peak > last_peak ):
+                        and (current_peak > last_peak):
                     real_peaks.append(peaks[i])
                     num += 1
     else:
