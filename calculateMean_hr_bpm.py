@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def calculate_mean_hr_bpm(data,peaks):
+def calculate_mean_hr_bpm(data, peaks):
     rr_interval_list = []
     for i in range(len(peaks)-1):
         upp = data.iloc[peaks[i+1]]['time']
