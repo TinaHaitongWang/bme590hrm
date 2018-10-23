@@ -11,9 +11,3 @@ def calculate_mean_hr_bpm(data, peaks):
 
     mean_hr_bpm = np.mean(rr_interval_list)
     return mean_hr_bpm
-
-
-
-
-
-
