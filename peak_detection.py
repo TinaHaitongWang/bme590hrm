@@ -24,28 +24,37 @@ def detect_peak(data, min_voltage, is_secondary_peak):
     peaks_corr, _ = find_peaks(corr)
     plt.plot(peaks_corr, data.voltage[peaks_corr], "o")
     """
+    num = 1
+    real_peaks = []
     if is_secondary_peak:
-        num = 1
-        real_peaks = []
         for i in range(len(peaks)-1):
-            if i == 0:# first peak
-                if data.iloc[peaks[i]]['voltage'] > data.iloc[peaks[i+1]]['voltage']:
+            if i == 0:  # first peak
+                first_peak = data.iloc[peaks[0]]['voltage']
+                second_peak = data.iloc[peaks[1]]['voltage']
+                if first_peak > second_peak:
                     # true local maxiumum
                     real_peaks.append(peaks[i])
                     num += 1
-            elif i == len(peaks)-1: # last peak
-                if real_peaks[-1] != peaks[-2] and data.iloc[peaks[-1]]['voltage'] > data.iloc[peaks[-2]]['voltage']:
+            elif i == len(peaks)-1:  # last peak
+                last_peak = data.iloc[peaks[-1]]['voltage']
+                second_to_last_peak = data.iloc[peaks[-2]]['voltage']
+                if (real_peaks[-1] != peaks[-2]
+                        and last_peak > second_to_last_peak):
                     real_peaks[num] = peaks[-1]
 
             else:
-                if (data.iloc[peaks[i]]['voltage'] > data.iloc[peaks[i+1]]['voltage']) \
-                        and (data.iloc[peaks[i]]['voltage'] > data.iloc[peaks[i-1]]['voltage']):
+                current_peak = data.iloc[peaks[i]]['voltage']
+                next_peak = data.iloc[peaks[i+1]]['voltage']
+                last_peak = data.iloc[peaks[i-1]]['voltage']
+                if (current_peak > next_peak) \
+                        and (current_peak > last_peak ):
                     real_peaks.append(peaks[i])
                     num += 1
-    else: real_peaks = peaks
+    else:
+        real_peaks = peaks
 
-    #plt.plot(peaks, data.voltage[peaks], '*', color='red')
-    #plt.plot(real_peaks, data.voltage[real_peaks], "o")
+    # plt.plot(peaks, data.voltage[peaks], '*', color='red')
+    # plt.plot(real_peaks, data.voltage[real_peaks], "o")
     plt.show()
     return real_peaks
 
@@ -55,4 +64,6 @@ if __name__ == '__main__':
     test_data = importdata(filename)
     data_valid = is_data_number(test_data)
     filtered_data = filter_data(data_valid)
-    real_peaks = detect_peak(filtered_data, min_voltage=0, is_secondary_peak=False)
+    is_secondary_peak = False
+    min_voltage = 0
+    peaks = detect_peak(filtered_data, min_voltage, is_secondary_peak)
