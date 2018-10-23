@@ -1,5 +1,6 @@
 numpy 
-ipython 
+ipython
+scipy
 pytest 
 pytest-cov
 pytest-pep8
