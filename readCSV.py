@@ -25,11 +25,3 @@ def importdata(file_name):
     # data.plot()
     # plt.show()
     return data
-<<<<<<< HEAD
-
-
-if __name__ == '__main__':
-    filename = "test_data30.csv"
-    importdata(filename)
-=======
->>>>>>> 8c53e0d39c421d364cb70ee74e2e2dccdcb23efc
