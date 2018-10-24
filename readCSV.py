@@ -20,4 +20,3 @@ def importdata(file_name):
 
     # print(data)
     return data
-
