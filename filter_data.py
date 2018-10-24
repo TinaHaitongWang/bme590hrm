@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def filter_data(data):
     voltage = data['voltage']
     # remove low frequency data by applying fft and ifft
-    plt.plot(voltage[1:1000])
+    # plt.plot(voltage[1:1000])
     fft = np.fft.fft(voltage)
     fft = np.fft.fftshift(fft)
     bandpass_limit = [int(len(fft)/4.5), int(len(fft)/4.5 * 3)]
