@@ -21,7 +21,3 @@ def importdata(file_name):
     # print(data)
     return data
 
-
-if __name__ == '__main__':
-    filename = "test_data70.csv"
-    importdata(filename)
