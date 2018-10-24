@@ -11,7 +11,8 @@ def test_is_filter_data_valid():
     data_valid = is_data_number(test_data)
     source = filter_data(data_valid)
     sample = len(source)
-    noise = 0.000000000000008*np.asarray(random.sample(range(0, sample), sample))
+    noise = 0.000000000000008*np.asarray(random.sample(range(0, sample),
+                                                       sample))
     source.voltage = source.voltage + noise
     filtered = filter_data(source)
     corr = filtered.voltage.corr(source.voltage)
