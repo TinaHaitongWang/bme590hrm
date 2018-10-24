@@ -3,10 +3,6 @@ import pandas as pd
 
 
 def is_data_number(test_data):
-<<<<<<< HEAD
-
-=======
->>>>>>> 8c53e0d39c421d364cb70ee74e2e2dccdcb23efc
     # print(test_data)
     new_data = test_data[pd.to_numeric(test_data.time,
                                        errors='coerce').notnull()]
