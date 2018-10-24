@@ -1,7 +1,6 @@
 from dataValidation import is_data_number
 from readCSV import importdata
 import numpy as np
-import matplotlib.pyplot as plt
 
 
 def filter_data(data):
