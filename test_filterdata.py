@@ -10,7 +10,7 @@ data_valid = is_data_number(test_data)
 data = filter_data(data_valid)
 
 
-def test_is_filter_data_valid(source, expected):
+def test_is_filter_data_valid(source):
     sample = len(source)
     noise = 0.000000000000008*np.asarray(random.sample(range(0, sample), sample))
     source.voltage = source.voltage + noise
