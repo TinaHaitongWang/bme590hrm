@@ -2,7 +2,6 @@ from readCSV import importdata
 import pandas as pd
 
 
-
 def is_data_number(test_data):
 
     # print(test_data)
