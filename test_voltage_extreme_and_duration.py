@@ -1,6 +1,5 @@
 from calculate_voltage_extreme_and_duration import calculate_duration,\
     calculate_voltage_extreme
-import pytest
 import numpy
 import scipy.signal as signal
 import pandas as pd
@@ -17,11 +16,11 @@ expected_voltage = [max(signal1), min(signal1)]
 expected_duration = max(t1)
 
 
-def test_voltage_extreme(df1, expected_voltage):
+def test_voltage_extreme():
     voltage_max, voltage_min = calculate_voltage_extreme(df1)
     assert voltage_max, voltage_min == expected_voltage
 
 
-def test_duration(df1, expected_duration):
+def test_duration():
     duration = calculate_duration(df1)
     assert duration == expected_duration
