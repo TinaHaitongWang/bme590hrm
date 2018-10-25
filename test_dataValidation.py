@@ -11,7 +11,7 @@ import pytest
     ("test_data28.csv", 9998),
     ("test_data29.csv", 9998),
     ("test_data31.csv", 9996),
-    ("test_data32.csv", 10000),
+    ("test_data32.csv", 9506),
 ])
 def test_is_data_number(source, expected):
     test_data = importdata(source)
