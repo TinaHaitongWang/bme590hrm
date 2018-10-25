@@ -16,10 +16,13 @@ def is_data_number(test_data):
     if out_data.voltage.dtype == 'object':
         out_data.loc[:, 'voltage'] = out_data['voltage'].apply(pd.to_numeric,
                                                                errors='ignore')
+
+    out_data = out_data[abs(out_data.voltage) >= 300]
+
     return out_data
 
 
 if __name__ == '__main__':
-    filename = "test_data30.csv"
+    filename = "test_data32.csv"
     data = importdata(filename)
     is_data_number(data)
