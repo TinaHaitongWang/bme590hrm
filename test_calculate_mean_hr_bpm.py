@@ -20,10 +20,9 @@ df1 = pd.DataFrame(data=d1)
 d2 = {'time': t2, 'voltage': signal2}
 df2 = pd.DataFrame(data=d2)
 
-
 @pytest.mark.parametrize("data, expected_bpm", [
-    (df1, 40),
-    (df2, 32),
+    (df1, 50),
+    (df2, 40),
 
 ])
 def test_peak_detection(data, expected_bpm):
