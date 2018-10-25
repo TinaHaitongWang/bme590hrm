@@ -35,6 +35,7 @@ expected_beats2 = [df2['time'].iloc[peaks2[0]], df2['time'].iloc[peaks2[-1]]]
 ])
 def test_peak_detection(data, peaks, expected_num_beats, expected_beats):
     num_beats, beats = calculate_number_beats_and_bests(data, peaks)
+    print(beats)
     beats = [beats[0], beats[-1]]
     assert num_beats == expected_num_beats
     assert beats == expected_beats
