@@ -19,7 +19,7 @@ def calculate_mean_hr_bpm(data, peaks, user_input=None):
         exist_peaks = peaks
 
     rr_interval_list = []
-    for i in range(len(exist_peaks)):
+    for i in range(len(exist_peaks)-1):
         upp = data.iloc[exist_peaks[i + 1]]['time']
         low = data.iloc[exist_peaks[i]]['time']
         time = upp - low
