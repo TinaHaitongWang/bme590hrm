@@ -12,7 +12,6 @@ def calculate_mean_hr_bpm(data, peaks):
     mean_hr_bpm = 60 / beats_in_seconds
     return mean_hr_bpm
 
-
 # if __name__ == '__main__':
 #     filename = "test_data3.csv"
 #     test_data = importdata(filename)
