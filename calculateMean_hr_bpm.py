@@ -10,8 +10,10 @@ def calculate_mean_hr_bpm(data, peaks, user_input=None):
         except IndexError:
             print('No enough user input')
 
-        if end_time <= data['time'].iloc[-1] and start_time <= data['time'].iloc[-1]:
-            right_peaks = np.where((data['time'].iloc[peaks] > start_time) & (data['time'].iloc[peaks] < end_time))
+        if end_time <= data['time'].iloc[-1] and \
+                start_time <= data['time'].iloc[-1]:
+            right_peaks = np.where((data['time'].iloc[peaks] > start_time) &
+                                   (data['time'].iloc[peaks] < end_time))
             exist_peaks = [peaks[x] for x in list(right_peaks[0])]
     else:
         exist_peaks = peaks
@@ -29,7 +31,6 @@ def calculate_mean_hr_bpm(data, peaks, user_input=None):
 
 
 """
-Use for testing 
 if __name__ == '__main__':
     filename = "test_data3.csv"
     test_data = importdata(filename)
