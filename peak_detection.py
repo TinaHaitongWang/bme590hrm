@@ -26,10 +26,13 @@ def detect_peak(section_data):
     # take a sample
     len_sample = round(len(section_data) / 20)
     sample_signal = section_data[1:len_sample]
-    index_max_sample = np.where(sample_signal.voltage == min(sample_signal.voltage))
+    index_max_sample = np.where(sample_signal.voltage ==
+                                min(sample_signal.voltage))
     index_max_sample = [x[0] for x in index_max_sample]
-    der = np.diff(sample_signal['voltage'][index_max_sample[0]:].multiply(0.001)) \
-                  / np.diff(sample_signal['time'][index_max_sample[0]:])
+    der = np.diff(
+        sample_signal['voltage']
+        [index_max_sample[0]:].multiply(0.001)) / \
+        np.diff(sample_signal['time'][index_max_sample[0]:])
     bottom = np.where(der == min(der, key=abs))
     least_range = [x[0] for x in bottom]
     real_peaks = []
@@ -55,10 +58,9 @@ def detect_peak(section_data):
     # print("real peaks:", real_peaks, len(real_peaks))
     return real_peaks
 
-
-if __name__ == '__main__':
-    filename = "test_data26.csv"
-    test_data = importdata(filename)
-    data_valid = is_data_number(test_data)
-    filtered_data = filter_data(data_valid)
-    peaks = detect_peak(filtered_data)
+# if __name__ == '__main__':
+#     filename = "test_data26.csv"
+#     test_data = importdata(filename)
+#     data_valid = is_data_number(test_data)
+#     filtered_data = filter_data(data_valid)
+#     peaks = detect_peak(filtered_data)
