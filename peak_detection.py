@@ -3,7 +3,6 @@ from scipy.signal import find_peaks
 from readCSV import importdata
 from dataValidation import is_data_number
 from filter_data import filter_data
-import matplotlib.pyplot as plt
 import numpy as np
 
 
@@ -50,10 +49,10 @@ def detect_peak(section_data):
                 last_peak = current_peak
 
     # plot and verification for tesitng
-    plt.plot(section_data.voltage)
-    plt.plot(peaks, section_data.voltage[peaks], 'o', color='red')
-    plt.plot(real_peaks, section_data.voltage[real_peaks], '*', color='blue')
-    plt.show()
+    # plt.plot(section_data.voltage)
+    # plt.plot(peaks, section_data.voltage[peaks], 'o', color='red')
+    # plt.plot(real_peaks, section_data.voltage[real_peaks], '*', color='blue')
+    # plt.show()
     # print("peaks:", peaks, len(peaks))
     # print("real peaks:", real_peaks, len(real_peaks))
     return real_peaks
