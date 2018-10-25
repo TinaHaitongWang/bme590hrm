@@ -22,7 +22,7 @@ df2 = pd.DataFrame(data=d2)
 
 
 @pytest.mark.parametrize("data, expected_bpm", [
-    (df1, 50),
+    (df1, 40),
     (df2, 55),
 
 ])
