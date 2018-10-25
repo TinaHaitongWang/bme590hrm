@@ -1,6 +1,9 @@
 # bme590hrm
 Heart rate monitor project 
 
+https://travis-ci.com/TinaHaitongWang/bme590hrm.svg?branch=master
+
+
 Author: Haitong Wang 
 Date: Oct 20, 2018 
 
