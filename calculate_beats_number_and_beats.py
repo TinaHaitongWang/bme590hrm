@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def calculate_number_beats_and_bests(data, peaks):
     num_beats = len(peaks)
     beats_list = []
@@ -9,7 +10,3 @@ def calculate_number_beats_and_bests(data, peaks):
 
     beats = np.array(beats_list)
     return num_beats, beats
-
-
-
-
