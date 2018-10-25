@@ -35,8 +35,8 @@ def detect_peak(section_data):
     bottom = np.where(der == min(der, key=abs))
     least_range = [x[0] for x in bottom]
     real_peaks = []
-    for i in range(len(peaks) - 1):
-        if i == 0 or i == len(peaks) - 2:  # first and last peak
+    for i in range(len(peaks)):
+        if i == 0 or i == len(peaks) - 1:  # first and last peak
             first_peak = section_data.iloc[peaks[i]]['voltage']
             if (max_voltage - first_peak) <= (max_voltage / 4):
                 real_peaks.append(peaks[i])
