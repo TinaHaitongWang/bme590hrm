@@ -4,7 +4,7 @@ import numpy as np
 def calculate_number_beats_and_bests(data, peaks):
     num_beats = len(peaks)
     beats_list = []
-    for i in range(len(peaks) - 1):
+    for i in range(len(peaks)):
         beat = data.iloc[peaks[i]]['time']
         beats_list.append(beat)
 
