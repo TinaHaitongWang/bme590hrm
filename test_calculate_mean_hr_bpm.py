@@ -19,14 +19,17 @@ d1 = {'time': t1, 'voltage': signal1}
 df1 = pd.DataFrame(data=d1)
 d2 = {'time': t2, 'voltage': signal2}
 df2 = pd.DataFrame(data=d2)
+print(t1[100:700])
+print(t2[30:600])
 
 
-@pytest.mark.parametrize("data, expected_bpm", [
+@pytest.mark.parametrize("data, expected_bpm, user_input", [
     (df1, 40),
     (df2, 55),
-
+    (df1, 20, [100, 700]),
+    (df2, 20, [30, 400])
 ])
-def test_peak_detection(data, expected_bpm):
+def test_mean_bpm(data, expected_bpm, user_input=None, ):
     peaks = detect_peak(data)
-    bpm = calculate_mean_hr_bpm(data, peaks)
+    bpm = calculate_mean_hr_bpm(data, peaks, user_input)
     assert abs(expected_bpm - bpm) <= 5
