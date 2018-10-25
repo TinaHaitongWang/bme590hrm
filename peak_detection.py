@@ -1,6 +1,5 @@
 # this function perform peak detection
-from scipy.signal import find_peaks, find_peaks_cwt
-import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
 from readCSV import importdata
 from dataValidation import is_data_number
 from filter_data import filter_data
