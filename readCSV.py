@@ -20,8 +20,6 @@ def importdata(file_name):
         print("You don't have the permission to open the file")
 
     # print(data)
-
-    # print(data)
     # data.plot()
     # plt.show()
     return data
