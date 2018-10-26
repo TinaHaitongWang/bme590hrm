@@ -3,7 +3,8 @@ from dataValidation import is_data_number
 from filter_data import filter_data
 from peak_detection import detect_peak
 from calculate_beats_number_and_beats import calculate_number_beats_and_bests
-from calculate_voltage_extreme_and_duration import calculate_duration, calculate_voltage_extreme
+from calculate_voltage_extreme_and_duration import calculate_duration, \
+    calculate_voltage_extreme
 from calculateMean_hr_bpm import calculate_mean_hr_bpm
 from metrics_dictionary import create_dictionary
 import fnmatch
@@ -14,7 +15,7 @@ class EcgTest:
 
     def __init__(self, filename_arg):
         self.filename = filename_arg
-        self.data = importdata(self.filename)
+        self.data = importdata(self.filename + '.csv')
         self.peaks = None
         self.mean_hr_bpm = None
         self.voltage_extreme = None
@@ -106,7 +107,7 @@ def main_function():
     number_of_csv = len(fnmatch.filter(os.listdir(dirpath), '*.csv'))
     for i in range(number_of_csv):
         print("current file: ", i+1)
-        filename = 'test_data' + str(i + 1) + '.csv'
+        filename = 'test_data' + str(i + 1)
         test = EcgTest(filename)
         valid_data = test.validate_data(test.get_data())
         filtered_data = test.filter_input_data(valid_data)
