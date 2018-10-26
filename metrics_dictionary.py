@@ -22,7 +22,3 @@ def output_metrics_to_json(metrics):
     outpath = os.path.join(dirpath, metrics["Filename"] + suffix)
     with open(outpath, 'w') as fp:
         json.dump(metrics, fp, sort_keys=False, indent=4)
-
-
-
-
