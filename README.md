@@ -56,7 +56,8 @@ _Following table contains all functional files for this application_
           main_function.py )
     1.2.4 Resultant json files should be stored under the same path in the folder called 
           Metrics_test_data in the orginial .csv file name 
-
+    1.2.5 for pytest, please use the following code to avoid subdirectory problem
+            python -m pytest test_files -v --pep8 
           
     Note: for calculating mean bpm, user can specify the length of data to calculate bpm. 
           Default setting has not input on that part. 
