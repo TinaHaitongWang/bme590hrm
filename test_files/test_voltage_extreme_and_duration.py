@@ -1,5 +1,5 @@
-from function_files.calculate_voltage_extreme_and_duration import calculate_duration,\
-    calculate_voltage_extreme
+from function_files.calculate_voltage_extreme_and_duration import \
+    calculate_duration, calculate_voltage_extreme
 import numpy
 import scipy.signal as signal
 import pandas as pd

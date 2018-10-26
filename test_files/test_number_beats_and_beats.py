@@ -1,6 +1,7 @@
 import pytest
 from function_files.peak_detection import detect_peak
-from function_files.calculate_beats_number_and_beats import calculate_number_beats_and_bests
+from function_files.calculate_beats_number_and_beats import \
+    calculate_number_beats_and_bests
 import numpy
 import scipy.signal as signal
 import pandas as pd
