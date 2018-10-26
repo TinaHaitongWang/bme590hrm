@@ -10,7 +10,7 @@ import fnmatch
 import os
 
 
-class ecg_test:
+class EcgTest:
 
     def __init__(self, filename_arg):
         self.filename = filename_arg
@@ -107,7 +107,7 @@ def main_function():
     for i in range(number_of_csv):
         print("current file: ", i+1)
         filename = 'test_data' + str(i + 1) + '.csv'
-        test = ecg_test(filename)
+        test = EcgTest(filename)
         valid_data = test.validate_data(test.get_data())
         filtered_data = test.filter_input_data(valid_data)
         peaks_ecg = test.find_peaks(filtered_data)
