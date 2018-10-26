@@ -26,7 +26,6 @@ def calculate_mean_hr_bpm(data, peaks, user_input=None):
         rr_interval_list.append(time)
     beats_in_seconds = np.mean(rr_interval_list)
     mean_hr_bpm = 60 / beats_in_seconds
-    print(mean_hr_bpm)
     return mean_hr_bpm
 
 
