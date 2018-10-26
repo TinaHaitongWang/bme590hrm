@@ -1,6 +1,6 @@
 import pytest
-from peak_detection import detect_peak
-from calculateMean_hr_bpm import calculate_mean_hr_bpm
+from function_files.peak_detection import detect_peak
+from function_files.calculateMean_hr_bpm import calculate_mean_hr_bpm
 import numpy
 import scipy.signal as signal
 import pandas as pd

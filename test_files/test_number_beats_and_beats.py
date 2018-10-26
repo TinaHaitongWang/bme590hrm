@@ -1,10 +1,9 @@
 import pytest
-from peak_detection import detect_peak
-from calculate_beats_number_and_beats import calculate_number_beats_and_bests
+from function_files.peak_detection import detect_peak
+from function_files.calculate_beats_number_and_beats import calculate_number_beats_and_bests
 import numpy
 import scipy.signal as signal
 import pandas as pd
-import numpy as np
 
 r_r_interval1 = [1.0, 1.0, 2.0, 1.5, 1.0, 1.5, 2.0, 1.5, 1.5, 2.0]
 r_r_interval2 = [2.0, 2.0, 2.0, 2.0, 1.0, 2.5, 2.5, 1.0]
