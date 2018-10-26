@@ -9,6 +9,7 @@ def test_json_output():
     for i in np.arange(31):
         current_file = 'test_data' + str(i + 1) + '.json'
         fullpath = os.path.join(os.getcwd(), "Metrics_test_data", current_file)
+
         if os.path.exists(fullpath):
             is_json_output = True
         else:
