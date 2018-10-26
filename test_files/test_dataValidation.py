@@ -1,5 +1,5 @@
-from dataValidation import is_data_number
-from readCSV import importdata
+from function_files.dataValidation import is_data_number
+from function_files.readCSV import importdata
 import pytest
 
 

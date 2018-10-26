@@ -1,4 +1,4 @@
-from main_function import main_function
+from function_files.main_function import main_function
 import numpy as np
 import os
 

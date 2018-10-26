@@ -1,12 +1,12 @@
-from readCSV import importdata
-from dataValidation import is_data_number
-from filter_data import filter_data
-from peak_detection import detect_peak
-from calculate_beats_number_and_beats import calculate_number_beats_and_bests
-from calculate_voltage_extreme_and_duration import calculate_duration, \
+from function_files.readCSV import importdata
+from function_files.dataValidation import is_data_number
+from function_files.filter_data import filter_data
+from function_files.peak_detection import detect_peak
+from function_files.calculate_beats_number_and_beats import calculate_number_beats_and_bests
+from function_files.calculate_voltage_extreme_and_duration import calculate_duration, \
     calculate_voltage_extreme
-from calculateMean_hr_bpm import calculate_mean_hr_bpm
-from metrics_dictionary import create_dictionary
+from function_files.calculateMean_hr_bpm import calculate_mean_hr_bpm
+from function_files.metrics_dictionary import create_dictionary
 import fnmatch
 import os
 

@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from readCSV import importdata
+from function_files.readCSV import importdata
 
 
 def plot_data(input_data):

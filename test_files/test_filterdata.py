@@ -1,6 +1,6 @@
-from filter_data import filter_data
-from readCSV import importdata
-from dataValidation import is_data_number
+from function_files.filter_data import filter_data
+from function_files.readCSV import importdata
+from function_files.dataValidation import is_data_number
 import numpy as np
 import random
 

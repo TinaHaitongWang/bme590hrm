@@ -5,6 +5,6 @@ cache:
       - pip
 install:
       - pip install -r requirements.txt
-script: 
-      - pytest -v --pep8
+script:
+      - python -m pytest test_files -v --pep8
     #      - pytest -v --cov --pep8
