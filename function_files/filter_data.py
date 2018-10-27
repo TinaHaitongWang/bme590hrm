@@ -1,9 +1,7 @@
 from function_files.dataValidation import is_data_number
 from function_files.readCSV import importdata
 import numpy as np
-"""This is the filter function file 
-Author: Haitong Wang (Tina)
-"""
+"""This is the filter function file, Author: Haitong Wang (Tina)"""
 
 
 def filter_data(data):
