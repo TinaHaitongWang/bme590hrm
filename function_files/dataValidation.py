@@ -1,8 +1,6 @@
 import pandas as pd
 
-"""This is a validation function file 
-Author: Haitong Wang (Tina)
-"""
+"""This is a validation function file, Author: Haitong Wang (Tina)"""
 
 
 def is_data_number(test_data):
