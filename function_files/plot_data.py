@@ -1,10 +1,9 @@
 import matplotlib.pyplot as plt
 from function_files.readCSV import importdata
 """This is a utility function file 
-
-    Author: Haitong Wang (Tina)
-
+Author: Haitong Wang (Tina)
 """
+
 
 def plot_data(input_data):
     """
