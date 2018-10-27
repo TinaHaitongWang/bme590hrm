@@ -1,9 +1,7 @@
 import json
 import os
 """This is a generation function file 
-
-    Author: Haitong Wang (Tina)
-
+Author: Haitong Wang (Tina)
 """
 
 
