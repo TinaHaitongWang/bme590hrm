@@ -1,7 +1,18 @@
 import pandas as pd
+"""This is a validation function file 
+
+    Author: Haitong Wang (Tina)
+
+"""
 
 
 def is_data_number(test_data):
+    """
+    this function examines if the data elements exist, and are numeric
+    and are below 300 mv
+    :param test_data: ecg data with time and voltage
+    :return: vlaid float64 number in dataframe
+    """
     # print(test_data)
     new_data = test_data[pd.to_numeric(test_data.time,
                                        errors='coerce').notnull()]
