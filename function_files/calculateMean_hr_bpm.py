@@ -1,7 +1,5 @@
 import numpy as np
-"""This is a calculation function file 
-Author: Haitong Wang (Tina)
-"""
+"""This is a calculation function file, Author: Haitong Wang (Tina)"""
 
 
 def calculate_mean_hr_bpm(data, peaks, user_input=None):
