@@ -1,6 +1,4 @@
-"""This is the main function of the Heart rat monitor project
-Author: Haitong Wang (Tina)
-"""
+"""This is the main function of the Heart rat monitor project"""
 from function_files.readCSV import importdata
 from function_files.dataValidation import is_data_number
 from function_files.filter_data import filter_data
