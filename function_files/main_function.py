@@ -240,6 +240,5 @@ def main_function():
 
 
 if __name__ == '__main__':
-    """ this is the intial function call the main function 
-    """
+    """ this is the intial function call the main function"""
     main_function()
