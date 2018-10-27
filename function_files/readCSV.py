@@ -1,13 +1,10 @@
 import pandas as pd
 import os
 """This is a function file 
-
-    Author: Haitong Wang (Tina)
-
+Author: Haitong Wang (Tina)
 """
 """ if the test data is not save in the source path, you
-need to update it in the following code 
-"""
+need to update it in the following code """
 cwd = os.getcwd()
 folderPath = "test_data"
 
