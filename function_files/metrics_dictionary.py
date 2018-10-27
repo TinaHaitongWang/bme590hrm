@@ -1,8 +1,6 @@
 import json
 import os
-"""This is a generation function file 
-Author: Haitong Wang (Tina)
-"""
+"""This is a generation function file"""
 
 
 def create_dictionary(data):
