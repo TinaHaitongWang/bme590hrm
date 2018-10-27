@@ -4,10 +4,7 @@ from function_files.dataValidation import is_data_number
 from function_files.filter_data import filter_data
 import numpy as np
 """This is a function file 
-
-    Author: Haitong Wang (Tina)
-
-"""
+Author: Haitong Wang (Tina)"""
 
 
 def detect_peak(section_data):
