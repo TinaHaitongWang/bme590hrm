@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+import logging
 """This is a function file Author: Haitong Wang (Tina)"""
 """ if the test data is not save in the source path, you
 need to update it in the following code """
@@ -23,9 +24,9 @@ def importdata(file_name):
     try:
         data = pd.read_csv(fullpath, names=headers)
     except FileNotFoundError:
-        print("The file does not exist, please check the path")
+        logging.error("The file does not exist, please check the path")
     except PermissionError:
-        print("You don't have the permission to open the file")
+        logging.warning("You don't have the permission to open the file")
 
     # print(data)
     # data.plot()
