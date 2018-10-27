@@ -1,8 +1,7 @@
 import pandas as pd
+
 """This is a validation function file 
-
-    Author: Haitong Wang (Tina)
-
+Author: Haitong Wang (Tina)
 """
 
 
@@ -30,7 +29,6 @@ def is_data_number(test_data):
     out_data = out_data[abs(out_data.voltage) <= 300]
 
     return out_data
-
 
 # if __name__ == '__main__':
 #     filename = "test_data23.csv"
