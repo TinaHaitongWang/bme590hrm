@@ -1,8 +1,6 @@
 import numpy as np
 """This is a calculation function file 
-
-    Author: Haitong Wang (Tina)
-
+Author: Haitong Wang (Tina)
 """
 
 
