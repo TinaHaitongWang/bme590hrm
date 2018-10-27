@@ -1,7 +1,5 @@
 import numpy as np
-"""This is a calculation function file 
-Author: Haitong Wang (Tina)
-"""
+"""This is a calculation function file, Author: Haitong Wang (Tina)"""
 
 
 def calculate_number_beats_and_bests(data, peaks):
