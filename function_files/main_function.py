@@ -11,6 +11,7 @@ from function_files.calculateMean_hr_bpm import calculate_mean_hr_bpm
 from function_files.metrics_dictionary import create_dictionary
 import fnmatch
 import os
+import logging
 
 
 class EcgTest(object):
@@ -195,17 +196,17 @@ class EcgTest(object):
                 designated location
         """
         if not self.peaks:
-            print("no peaks")
+            logging.warning("no peaks")
         elif not self.mean_hr_bpm:
-            print("no mean bpm")
+            logging.warning("no mean bpm")
         elif not self.voltage_extreme:
-            print("no voltage extreme")
+            logging.warning("no voltage extreme")
         elif not self.time_duration:
-            print("no time duration")
+            logging.warning("no time duration")
         elif not self.num_beats:
-            print("no number of beats")
+            logging.warning("no number of beats")
         elif not self.beats:
-            print("no beats")
+            logging.warning("no beats")
         else:
             create_dictionary(self)
 
