@@ -1,7 +1,16 @@
 import numpy as np
+"""This is a calculation function file, Author: Haitong Wang (Tina)"""
 
 
 def calculate_mean_hr_bpm(data, peaks, user_input=None):
+    """
+    this function calculate the mean heart rate beats per minute
+    :param data: ecg data with time and voltage
+    :param peaks: index of peak location in the ecg data
+    :param user_input: user specified time period for calculating
+    the bpm, in the form of [starting_time, ending_time]
+    :return: beats per minute
+    """
     exist_peaks = []
     if user_input:
         try:

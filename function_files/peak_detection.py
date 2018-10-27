@@ -1,12 +1,18 @@
-# this function perform peak detection
 from scipy.signal import find_peaks
 from function_files.readCSV import importdata
 from function_files.dataValidation import is_data_number
 from function_files.filter_data import filter_data
 import numpy as np
+"""This is a function file Author: Haitong Wang (Tina)"""
 
 
 def detect_peak(section_data):
+    """
+    this function detects the peak in each QRS complex of the ecg
+    data
+    :param section_data: data with the time and voltage
+    :return: peak index in the data
+    """
     # truncate signal into pieces to avoid problem of drifting
     max_voltage = max(section_data['voltage'])
     min_voltage = min(section_data['voltage'])
@@ -58,9 +64,9 @@ def detect_peak(section_data):
     return real_peaks
 
 
-if __name__ == '__main__':
-    filename = "test_data3.csv"
-    test_data = importdata(filename)
-    data_valid = is_data_number(test_data)
-    filtered_data = filter_data(data_valid)
-    peaks = detect_peak(filtered_data)
+# if __name__ == '__main__':
+#     filename = "test_data3.csv"
+#     test_data = importdata(filename)
+#     data_valid = is_data_number(test_data)
+#     filtered_data = filter_data(data_valid)
+#     peaks = detect_peak(filtered_data)

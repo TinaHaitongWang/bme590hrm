@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+  
+=======
 # BME 590 Heart Rate Monitor Project 
  
 [![Build Status](https://travis-ci.com/TinaHaitongWang/bme590hrm.svg?branch=master)](https://travis-ci.com/TinaHaitongWang/bme590hrm)
@@ -93,4 +96,5 @@ _Following table contains all functional files for this application_
     1.5 Generate Output, metrics dics ---> JSON file 
       
       
+>>>>>>> 3b693327997cc0a5ae89d1babef03bb0a350195f
           
