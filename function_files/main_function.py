@@ -1,15 +1,14 @@
 """This is the main function of the Heart rat monitor project
-
-    Author: Haitong Wang (Tina)
-
+Author: Haitong Wang (Tina)
 """
 from function_files.readCSV import importdata
 from function_files.dataValidation import is_data_number
 from function_files.filter_data import filter_data
 from function_files.peak_detection import detect_peak
-from function_files.calculate_beats_number_and_beats import calculate_number_beats_and_bests
-from function_files.calculate_voltage_extreme_and_duration import calculate_duration, \
-    calculate_voltage_extreme
+from function_files.calculate_beats_number_and_beats import\
+    calculate_number_beats_and_bests
+from function_files.calculate_voltage_extreme_and_duration import \
+    calculate_duration, calculate_voltage_extreme
 from function_files.calculateMean_hr_bpm import calculate_mean_hr_bpm
 from function_files.metrics_dictionary import create_dictionary
 import fnmatch
@@ -17,14 +16,14 @@ import os
 
 
 class EcgTest(object):
-    """ this is the public of EcgTest, contains all methods to compute the metrics
-    Only the filename is required to initiate an instance of the EcgTest class. Other
-    parameters are assigned and used through set_ and get_ methods
+    """ this is the public of EcgTest, contains all methods to compute the
+    metrics
+    Only the filename is required to initiate an instance of the EcgTest class.
+    Other parameters are assigned and used through set_ and get_ methods
     """
 
     def __init__(self, filename_arg):
-        """
-        this is the initial function
+        """this is the initial function
         :param filename_arg: input the filename for the test_data
         """
         self.filename = filename_arg
@@ -243,7 +242,6 @@ def main_function():
 
 
 if __name__ == '__main__':
-    """
-    this is the intial function call the main function 
+    """ this is the intial function call the main function 
     """
     main_function()
