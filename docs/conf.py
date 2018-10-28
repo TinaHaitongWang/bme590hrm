@@ -14,19 +14,20 @@
 #
 import os
 import sys
+sys.path.insert(0, os.path.abspath('..'))
 
-sys.path.insert(0, os.path.abspath('.'))
 
 # -- Project information -----------------------------------------------------
 
-project = 'bme590hrm'
+project = 'BME 590 Heart Rate Monitor'
 copyright = '2018, Haitong Wang'
 author = 'Haitong Wang'
 
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = 'v 1.0.0'
+release = 'v 1.0.1'
+
 
 # -- General configuration ---------------------------------------------------
 
@@ -39,7 +40,6 @@ release = 'v 1.0.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.intersphinx',
     'sphinx.ext.ifconfig',
 ]
 
@@ -65,10 +65,11 @@ language = 'python'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -102,7 +103,8 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ---------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'bme590hrmdoc'
+htmlhelp_basename = 'BME590HeartRateMonitordoc'
+
 
 # -- Options for LaTeX output ------------------------------------------------
 
@@ -128,18 +130,20 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'bme590hrm.tex', 'bme590hrm Documentation',
+    (master_doc, 'BME590HeartRateMonitor.tex', 'BME 590 Heart Rate Monitor Documentation',
      'Haitong Wang', 'manual'),
 ]
+
 
 # -- Options for manual page output ------------------------------------------
 
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'bme590hrm', 'bme590hrm Documentation',
+    (master_doc, 'bme590heartratemonitor', 'BME 590 Heart Rate Monitor Documentation',
      [author], 1)
 ]
+
 
 # -- Options for Texinfo output ----------------------------------------------
 
@@ -147,10 +151,11 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'bme590hrm', 'bme590hrm Documentation',
-     author, 'bme590hrm', 'One line description of project.',
+    (master_doc, 'BME590HeartRateMonitor', 'BME 590 Heart Rate Monitor Documentation',
+     author, 'BME590HeartRateMonitor', 'One line description of project.',
      'Miscellaneous'),
 ]
+
 
 # -- Options for Epub output -------------------------------------------------
 
@@ -169,9 +174,5 @@ epub_title = project
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
 
+
 # -- Extension configuration -------------------------------------------------
-
-# -- Options for intersphinx extension ---------------------------------------
-
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'https://docs.python.org/': None}
