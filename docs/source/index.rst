@@ -9,8 +9,16 @@ Welcome to bme590hrm's documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
-
-.. automodule:: calculate_beats_number_and_beats
+         calculate_beats_number_and_beats
+         calculate_voltage_extreme_and_duration.py
+         calculateMean_hr_bpm
+         dataValidation
+         filter_data
+         main_function
+         metrics_dictionary
+         peak_detection
+         plot_data
+         readCSV
 
 Indices and tables
 ==================
